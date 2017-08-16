@@ -83,10 +83,14 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9ioi5qkgvje2e',
+        'USER': 'raqfycywcrskmj',
+        'PASSWORD':'f7d8a5230628ecbef406a6b39dcb0b2c5d7513841ac51bd91e19827184599b2c',
+        'HOST':'ec2-54-235-120-39.compute-1.amazonaws.com',
+        'PORT': 5432,
+    }
 
 
 # Password validation
