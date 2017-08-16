@@ -29,7 +29,7 @@ def get_delete_update_item(request, pk):
         item.delete()
         json = {'message':
                 'Item deleted successfully'}
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(json,status=status.HTTP_204_NO_CONTENT)
     # update details of a single Item
     elif request.method == 'PUT':
         data = {
